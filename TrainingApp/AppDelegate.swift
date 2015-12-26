@@ -16,7 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch
+        if TestDataGenerator.shouldGenerateDataForContext(managedObjectContext) {
+            let generator = TestDataGenerator(context: managedObjectContext)
+            generator.generateData()
+            saveContext()
+        }
         return true
     }
 

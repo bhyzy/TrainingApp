@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15A284" minimumToolsVersion="Automatic">
-    <entity name="Exercise" parentEntity="TrainingItem" syncable="YES">
+    <entity name="Exercise" representedClassName=".Exercise" parentEntity="TrainingItem" syncable="YES">
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Repeat" parentEntity="TrainingItem" syncable="YES">
+    <entity name="Repeat" representedClassName=".Repeat" parentEntity="TrainingItem" syncable="YES">
         <attribute name="numberOfRepeats" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Rest" parentEntity="TrainingItem" syncable="YES">
+    <entity name="Rest" representedClassName=".Rest" parentEntity="TrainingItem" syncable="YES">
         <attribute name="duration" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="Training" syncable="YES">
+    <entity name="Training" representedClassName=".Training" syncable="YES">
         <attribute name="name" attributeType="String" syncable="YES"/>
         <relationship name="steps" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TrainingItem" inverseName="training" inverseEntity="TrainingItem" syncable="YES"/>
     </entity>
-    <entity name="TrainingItem" isAbstract="YES" syncable="YES">
+    <entity name="TrainingItem" representedClassName=".TrainingItem" isAbstract="YES" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="children" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TrainingItem" inverseName="parent" inverseEntity="TrainingItem" syncable="YES"/>
         <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TrainingItem" inverseName="children" inverseEntity="TrainingItem" syncable="YES"/>
