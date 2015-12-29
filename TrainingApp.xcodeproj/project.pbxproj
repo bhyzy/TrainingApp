@@ -15,6 +15,7 @@
 		989B9F561C2EB2CB00140ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989B9F541C2EB2CB00140ADD /* LaunchScreen.storyboard */; };
 		989B9F611C2EB2CB00140ADD /* TrainingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B9F601C2EB2CB00140ADD /* TrainingAppTests.swift */; };
 		989B9F6C1C2EB2CB00140ADD /* TrainingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B9F6B1C2EB2CB00140ADD /* TrainingAppUITests.swift */; };
+		98DA55F71C32CB66003EEBAA /* PersistentStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DA55F61C32CB66003EEBAA /* PersistentStack.swift */; };
 		98FE0E431C2ECA54007F58BC /* TestDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE0E421C2ECA54007F58BC /* TestDataGenerator.swift */; };
 		98FE0E4E1C2ECBBA007F58BC /* Rest+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE0E441C2ECBBA007F58BC /* Rest+CoreDataProperties.swift */; };
 		98FE0E4F1C2ECBBA007F58BC /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98FE0E451C2ECBBA007F58BC /* Rest.swift */; };
@@ -60,6 +61,7 @@
 		989B9F671C2EB2CB00140ADD /* TrainingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrainingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B9F6B1C2EB2CB00140ADD /* TrainingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingAppUITests.swift; sourceTree = "<group>"; };
 		989B9F6D1C2EB2CB00140ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98DA55F61C32CB66003EEBAA /* PersistentStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistentStack.swift; sourceTree = "<group>"; };
 		98FE0E421C2ECA54007F58BC /* TestDataGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataGenerator.swift; sourceTree = "<group>"; };
 		98FE0E441C2ECBBA007F58BC /* Rest+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rest+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		98FE0E451C2ECBBA007F58BC /* Rest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				98FE0E4B1C2ECBBA007F58BC /* TrainingItem.swift */,
 				98FE0E4C1C2ECBBA007F58BC /* Repeat+CoreDataProperties.swift */,
 				98FE0E4D1C2ECBBA007F58BC /* Repeat.swift */,
+				98DA55F61C32CB66003EEBAA /* PersistentStack.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				98FE0E501C2ECBBA007F58BC /* Training+CoreDataProperties.swift in Sources */,
 				98FE0E561C2ECBBA007F58BC /* Repeat+CoreDataProperties.swift in Sources */,
 				989B9F491C2EB2CB00140ADD /* AppDelegate.swift in Sources */,
+				98DA55F71C32CB66003EEBAA /* PersistentStack.swift in Sources */,
 				98FE0E4F1C2ECBBA007F58BC /* Rest.swift in Sources */,
 				98FE0E571C2ECBBA007F58BC /* Repeat.swift in Sources */,
 				98FE0E531C2ECBBA007F58BC /* Exercise.swift in Sources */,
