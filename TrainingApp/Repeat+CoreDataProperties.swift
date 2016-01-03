@@ -2,7 +2,7 @@
 //  Repeat+CoreDataProperties.swift
 //  TrainingApp
 //
-//  Created by Bartłomiej Hyży on 26/12/15.
+//  Created by Bartłomiej Hyży on 03/01/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,6 +14,6 @@ import CoreData
 
 extension Repeat {
 
-    @NSManaged var numberOfRepeats: Int32
+    @NSManaged var numberOfRepeats: Int64
 
 }

@@ -152,6 +152,18 @@
 			path = TrainingAppUITests;
 			sourceTree = "<group>";
 		};
+		989D51381C394D1F00619599 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				98FE0E441C2ECBBA007F58BC /* Rest+CoreDataProperties.swift */,
+				98FE0E461C2ECBBA007F58BC /* Training+CoreDataProperties.swift */,
+				98FE0E481C2ECBBA007F58BC /* Exercise+CoreDataProperties.swift */,
+				98FE0E4A1C2ECBBA007F58BC /* TrainingItem+CoreDataProperties.swift */,
+				98FE0E4C1C2ECBBA007F58BC /* Repeat+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
 		98FE0E3F1C2EC980007F58BC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,17 +176,13 @@
 			isa = PBXGroup;
 			children = (
 				989B9F4F1C2EB2CB00140ADD /* TrainingApp.xcdatamodeld */,
-				98FE0E441C2ECBBA007F58BC /* Rest+CoreDataProperties.swift */,
-				98FE0E451C2ECBBA007F58BC /* Rest.swift */,
-				98FE0E461C2ECBBA007F58BC /* Training+CoreDataProperties.swift */,
-				98FE0E471C2ECBBA007F58BC /* Training.swift */,
-				98FE0E481C2ECBBA007F58BC /* Exercise+CoreDataProperties.swift */,
-				98FE0E491C2ECBBA007F58BC /* Exercise.swift */,
-				98FE0E4A1C2ECBBA007F58BC /* TrainingItem+CoreDataProperties.swift */,
-				98FE0E4B1C2ECBBA007F58BC /* TrainingItem.swift */,
-				98FE0E4C1C2ECBBA007F58BC /* Repeat+CoreDataProperties.swift */,
-				98FE0E4D1C2ECBBA007F58BC /* Repeat.swift */,
 				98DA55F61C32CB66003EEBAA /* PersistentStack.swift */,
+				989D51381C394D1F00619599 /* Generated */,
+				98FE0E451C2ECBBA007F58BC /* Rest.swift */,
+				98FE0E471C2ECBBA007F58BC /* Training.swift */,
+				98FE0E491C2ECBBA007F58BC /* Exercise.swift */,
+				98FE0E4B1C2ECBBA007F58BC /* TrainingItem.swift */,
+				98FE0E4D1C2ECBBA007F58BC /* Repeat.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
