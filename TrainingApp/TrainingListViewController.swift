@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TrainingListViewController: UITableViewController, FetchedResultsControllerDataSourceDelegate {
+class TrainingListViewController: UITableViewController, TrainingEditViewControllerDelegate, FetchedResultsControllerDataSourceDelegate {
     
     var dataSource: FetchedResultsControllerDataSource!
 
@@ -33,6 +33,29 @@ class TrainingListViewController: UITableViewController, FetchedResultsControlle
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         dataSource.paused = true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddTraining" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            presentAddTrainingViewController(navigationController.topViewController as! TrainingEditViewController)
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func presentAddTrainingViewController(controller: TrainingEditViewController) {
+        controller.delegate = self
+    }
+    
+    // MARK: - TrainingEditViewControllerDelegate
+    
+    func trainingEditViewControllerDidCancel(controller: TrainingEditViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func trainingEditViewControllerDidCommitChanges(controller: TrainingEditViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
 
     // MARK: - FetchedResultsControllerDataSourceDelegate

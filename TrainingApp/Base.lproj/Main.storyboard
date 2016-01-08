@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -21,6 +22,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gBi-uy-g8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-772" y="258"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iQX-X3-qVS">
+            <objects>
+                <navigationController id="eb8-9F-O75" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6uy-K4-GKN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y0B-zU-ncW" kind="relationship" relationship="rootViewController" id="v2O-P8-jyI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qp9-wF-0kA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-260.5" y="1092.5"/>
+        </scene>
+        <!--Add/Edit Training-->
+        <scene sceneID="qqD-p1-d3k">
+            <objects>
+                <tableViewController title="Add/Edit Training" id="Y0B-zU-ncW" customClass="TrainingEditViewController" customModule="TrainingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ue0-56-yAd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="O2b-nM-0bG">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="L6k-Vq-mee">
+                                        <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L6k-Vq-mee" id="9fK-Dy-DWh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pv2-ER-M3D">
+                                                    <rect key="frame" x="8" y="8" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAb-Ih-YZq">
+                                                    <rect key="frame" x="8" y="36" width="359" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pv2-ER-M3D" secondAttribute="trailing" id="MhZ-BC-CVg"/>
+                                                <constraint firstItem="hAb-Ih-YZq" firstAttribute="leading" secondItem="9fK-Dy-DWh" secondAttribute="leadingMargin" id="XgR-qz-yBq"/>
+                                                <constraint firstItem="hAb-Ih-YZq" firstAttribute="trailing" secondItem="9fK-Dy-DWh" secondAttribute="trailingMargin" id="pIs-Df-b0k"/>
+                                                <constraint firstItem="hAb-Ih-YZq" firstAttribute="top" secondItem="pv2-ER-M3D" secondAttribute="bottom" constant="8" id="tZV-4J-7ab"/>
+                                                <constraint firstItem="pv2-ER-M3D" firstAttribute="top" secondItem="9fK-Dy-DWh" secondAttribute="topMargin" id="uDC-Yi-tVO"/>
+                                                <constraint firstItem="pv2-ER-M3D" firstAttribute="leading" secondItem="9fK-Dy-DWh" secondAttribute="leadingMargin" id="yQu-c7-s0j"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add/Edit Training" id="F15-tX-vGZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="zOj-Yr-fM6">
+                            <connections>
+                                <action selector="cancelItemTapped:" destination="Y0B-zU-ncW" id="bYB-wR-Q2S"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="cKq-5s-she">
+                            <connections>
+                                <action selector="commitItemTapped:" destination="Y0B-zU-ncW" id="dDJ-Uz-JpK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelBarButtonItem" destination="zOj-Yr-fM6" id="bj4-Px-mLX"/>
+                        <outlet property="commitBarButtonItem" destination="cKq-5s-she" id="vdH-2H-qUo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XU7-2Y-9Qy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255.5" y="1092.5"/>
         </scene>
         <!--Training List-->
         <scene sceneID="4Vf-Wa-H1p">
@@ -53,7 +135,13 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Trainings" id="ivQ-Wd-bfN"/>
+                    <navigationItem key="navigationItem" title="Trainings" id="ivQ-Wd-bfN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w5T-2n-Ofg">
+                            <connections>
+                                <segue destination="eb8-9F-O75" kind="presentation" identifier="AddTraining" id="P12-jE-shr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oSJ-0T-BaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
