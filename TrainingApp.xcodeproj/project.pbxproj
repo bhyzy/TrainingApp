@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9878F6211C3FD2CB001050F0 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9878F6201C3FD2CB001050F0 /* TrainingViewController.swift */; };
 		989B9F491C2EB2CB00140ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B9F481C2EB2CB00140ADD /* AppDelegate.swift */; };
 		989B9F4B1C2EB2CB00140ADD /* TrainingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989B9F4A1C2EB2CB00140ADD /* TrainingListViewController.swift */; };
 		989B9F4E1C2EB2CB00140ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 989B9F4C1C2EB2CB00140ADD /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9878F6201C3FD2CB001050F0 /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		989B9F451C2EB2CB00140ADD /* TrainingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrainingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		989B9F481C2EB2CB00140ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		989B9F4A1C2EB2CB00140ADD /* TrainingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingListViewController.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				989B9F4A1C2EB2CB00140ADD /* TrainingListViewController.swift */,
+				9878F6201C3FD2CB001050F0 /* TrainingViewController.swift */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				98FE0E4F1C2ECBBA007F58BC /* Rest.swift in Sources */,
 				98FE0E571C2ECBBA007F58BC /* Repeat.swift in Sources */,
 				98FE0E531C2ECBBA007F58BC /* Exercise.swift in Sources */,
+				9878F6211C3FD2CB001050F0 /* TrainingViewController.swift in Sources */,
 				98FE0E511C2ECBBA007F58BC /* Training.swift in Sources */,
 				98FE0E4E1C2ECBBA007F58BC /* Rest+CoreDataProperties.swift in Sources */,
 				98FE0E431C2ECA54007F58BC /* TestDataGenerator.swift in Sources */,
