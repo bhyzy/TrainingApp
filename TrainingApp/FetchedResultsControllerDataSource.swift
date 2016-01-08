@@ -31,13 +31,31 @@ protocol FetchedResultsControllerDataSourceDelegate {
         super.init()
         
         fetchedResultsController.delegate = self
+        performFetch()
+        
+        tableView.dataSource = self
+    }
+    
+    var paused: Bool = false {
+        didSet {
+            if paused {
+                fetchedResultsController.delegate = nil
+            } else {
+                fetchedResultsController.delegate = self
+                performFetch()
+                tableView.reloadData()
+            }
+        }
+    }
+    
+    // MARK: - Private Methods
+    
+    private func performFetch() {
         do {
             try fetchedResultsController.performFetch()
         } catch {
             NSLog("Failed to perform fetch request: \(error)")
         }
-        
-        tableView.dataSource = self
     }
     
     // MARK: - UITableViewDataSource

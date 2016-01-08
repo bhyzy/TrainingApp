@@ -22,6 +22,18 @@ class TrainingListViewController: UITableViewController, FetchedResultsControlle
         let trainingsFRC = Training.trainingsFetchedResultsControllerForContext(context)
         dataSource = FetchedResultsControllerDataSource(tableView: tableView, fetchedResultsController: trainingsFRC, delegate: self, reuseIdentifier: "TrainingCell")
     }
+    
+    // MARK: - Overriden
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        dataSource.paused = false
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        dataSource.paused = true
+    }
 
     // MARK: - FetchedResultsControllerDataSourceDelegate
     
