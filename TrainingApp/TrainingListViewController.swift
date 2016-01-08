@@ -8,18 +8,32 @@
 
 import UIKit
 
-class TrainingListViewController: UIViewController {
+class TrainingListViewController: UITableViewController, FetchedResultsControllerDataSourceDelegate {
+    
+    var dataSource: FetchedResultsControllerDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // TODO: pass context or persistent stack from outside
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let context = appDelegate.persistentStack.managedObjectContext
+        
+        let trainingsFRC = Training.trainingsFetchedResultsControllerForContext(context)
+        dataSource = FetchedResultsControllerDataSource(tableView: tableView, fetchedResultsController: trainingsFRC, delegate: self, reuseIdentifier: "TrainingCell")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - FetchedResultsControllerDataSourceDelegate
+    
+    func configureCell(cell: AnyObject, withObject object: AnyObject) {
+        let training = object as! Training
+        let tableViewCell = cell as! UITableViewCell
+        tableViewCell.textLabel?.text = training.name
     }
-
+    
+    func deleteObject(object: AnyObject) {
+        // TODO: implement
+    }
 
 }
 

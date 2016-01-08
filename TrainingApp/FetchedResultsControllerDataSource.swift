@@ -10,6 +10,11 @@ import Foundation
 import CoreData
 import UIKit
 
+protocol FetchedResultsControllerDataSourceDelegate {
+    func configureCell(cell: AnyObject, withObject object: AnyObject)
+    func deleteObject(object: AnyObject)
+}
+
 @objc class FetchedResultsControllerDataSource: NSObject, UITableViewDataSource, NSFetchedResultsControllerDelegate {
     
     let tableView: UITableView
@@ -25,8 +30,14 @@ import UIKit
         
         super.init()
         
-        tableView.dataSource = self
         fetchedResultsController.delegate = self
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            NSLog("Failed to perform fetch request: \(error)")
+        }
+        
+        tableView.dataSource = self
     }
     
     // MARK: - UITableViewDataSource
@@ -81,9 +92,4 @@ import UIKit
         }
     }
     
-}
-
-protocol FetchedResultsControllerDataSourceDelegate {
-    func configureCell(cell: AnyObject, withObject object: AnyObject)
-    func deleteObject(object: AnyObject)
 }

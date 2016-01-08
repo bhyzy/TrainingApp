@@ -34,7 +34,7 @@ class Training: NSManagedObject {
         return count
     }
     
-    class func trainingsFetchedResultsController(context: NSManagedObjectContext) -> NSFetchedResultsController {
+    class func trainingsFetchedResultsControllerForContext(context: NSManagedObjectContext) -> NSFetchedResultsController {
         let fetchRequest = NSFetchRequest(entityName: self.entityName)
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "order", ascending: true)]
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
