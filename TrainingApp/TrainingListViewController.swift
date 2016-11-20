@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import CoreData
 
 class TrainingListViewController: UITableViewController, TrainingEditViewControllerDelegate, FetchedResultsControllerDataSourceDelegate {
     
     var dataSource: FetchedResultsControllerDataSource!
+    var managedObjectContext: NSManagedObjectContext!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // TODO: pass context or persistent stack from outside
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        let context = appDelegate.persistentStack.managedObjectContext
+        managedObjectContext = appDelegate.persistentStack.managedObjectContext
         
-        let trainingsFRC = Training.trainingsFetchedResultsControllerForContext(context)
+        let trainingsFRC = Training.trainingsFetchedResultsControllerForContext(managedObjectContext)
         dataSource = FetchedResultsControllerDataSource(tableView: tableView, fetchedResultsController: trainingsFRC, delegate: self, reuseIdentifier: "TrainingCell")
     }
     
@@ -45,6 +47,7 @@ class TrainingListViewController: UITableViewController, TrainingEditViewControl
     // MARK: - Private Methods
     
     private func presentAddTrainingViewController(controller: TrainingEditViewController) {
+        controller.managedObjectContext = managedObjectContext
         controller.delegate = self
     }
     
